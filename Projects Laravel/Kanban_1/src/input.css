@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-c1: #FFFAFE; /* Light background color */
+    --color-c2: #A2A4A4; /* Secondary background color */
+    --color-c3: #C0C0C0; /* Neutral background color */
+    --color-c4: #DDDCDC; /* Light gray background */
+    --color-c5: #B4B1B2; /* Accent color */
+    --color-c6: #9F9B9D; /* Darker accent color */
+}

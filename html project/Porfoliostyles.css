@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 1em 0;
+    height: 300px;
+}
+
+.home{
+    display: flex;
+    justify-content:  space-between;
+    height: 40px;
+}
+
+.logo {
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 0;
+    margin-right: 50px;
+}
+
+.navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    row-gap: 10px;
+}
+
+.banner-text {
+    margin: 50px;
+    padding: 10px;
+    margin-left: 0px;
+    width: 400px;
+    height: 100px;
+}
+
+.about-me {
+    color: rgb(218, 31, 31);
+    display: flex;
+    align-items: left;
+}
+
+.image {
+    margin: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.project-hearder {
+   background-color: #0000002f;
+   height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects {
+    background-color: rgba(0, 0, 0, 0.116);
+    height: auto;
+    width: 1000p;
+    margin: 30px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 20px;
+}
+
+.item1 {
+    height: 500px;
+    width: 500px;
+    margin: 0;
+    border: 5px solid pink;
+    padding: 0;
+    background-color: rgba(255, 192, 203, 0.349);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item2 {
+    height: 500px;
+    width: 500px;
+    margin: 0;
+    border: 5px solid pink;
+    padding: 0;
+    background-color: rgba(255, 192, 203, 0.349);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: left;
+}
+    
+
+.item3 {
+    height: 500px;
+    width: 500px;
+    margin: 0;
+    border: 5px solid pink;
+    padding: 0;
+    background-color: rgba(255, 192, 203, 0.349);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item4 {
+    height: 500px;
+    width: 500px;
+    margin: 0;
+    border: 5px solid pink;
+    padding: 0;
+    background-color: rgba(255, 192, 203, 0.349);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact {
+    margin: 20px;
+    padding: 0;
+    height: 300px;
+}
+
+footer {
+    margin: 0;
+    padding: 1rem 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

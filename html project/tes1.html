@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kanban Board</title>
+</head>
+
+<body>
+    <div class="kanban-board">
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-title">
+                <div class="color-code1"></div>
+                <div class="T">
+                    <h2>To Do</h2>
+                </div>
+                <div class="add-task">
+                    <button onclick="document.querySelector('.new-task').click()">+</button>
+                </div>
+            </div>
+            <div class="new-task" onclick="addTask(this)"></div>
+        </div>
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-title">
+                <div class="color-code2"></div>
+                <div class="T2">
+                    <h2>In Progress</h2>
+                </div>
+                <div class="add-task">
+                    <button onclick="document.querySelector('.new-task').click()">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-title">
+                <div class="color-code3"></div>
+                <div class="T">
+                    <h2>Done</h2>
+                </div>
+                <div class="add-task">
+                    <button onclick="document.querySelector('.new-task').click()">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            const data = event.dataTransfer.getData("text");
+            const card = document.getElementById(data);
+            event.target.closest('.column').appendChild(card);
+        }
+
+        function addTask(button) {
+            const taskTitle = prompt("Enter task title:");
+            const taskDescription = prompt("Enter task description:");
+            if (taskTitle && taskDescription) {
+                const newTask = document.createElement("div");
+                newTask.className = "card";
+                newTask.draggable = true;
+                newTask.ondragstart = drag;
+                newTask.id = `task${Date.now()}`; // Unique ID for each task
+
+                const title = document.createElement("strong");
+                title.textContent = taskTitle;
+
+                const description = document.createElement("p");
+                description.textContent = taskDescription;
+
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.onclick = function () {
+                    deleteTask(deleteButton);
+                };
+
+                newTask.appendChild(title);
+                newTask.appendChild(description);
+                newTask.appendChild(deleteButton);
+
+                button.parentElement.insertBefore(newTask, button);
+            }
+        }
+
+        function deleteTask(button) {
+            const task = button.parentElement;
+            task.remove();
+        }
+    </script>
+</body>
+
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .kanban-board {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 1200px;
+    }
+
+    .column {
+        background-color: #ffffff;
+        width: 30%;
+        padding: 10px;
+    }
+
+    .column-title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        justify-content: start;
+        background-color: #dbdbdb;
+        height: 20px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+
+    .column-title .T {
+        border-right: 180px solid transparent;
+        width: auto;
+    }
+
+    .column-title .T2 {
+        border-right: 130px solid transparent;
+        width: auto;
+    }
+
+    .column .column-title .color-code1 {
+        background-color: #757171;
+        width: 10%;
+        height: 30px;
+    }
+
+    .column .column-title .color-code2 {
+        background-color: #cd9860;
+        width: 10%;
+        height: 30px;
+    }
+
+    .column .column-title .color-code3 {
+        background-color: #41ce43;
+        width: 10%;
+        height: 30px;
+    }
+
+    .column .column-title h2 {
+        display: flex;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        word-spacing: 1.6px;
+        color: #333;
+    }
+
+    .card {
+        background-color: #e9e9e9;
+        border-radius: 15px;
+        display: block;
+        margin: 10px auto 0;
+        color: #FFF;
+        padding: 10px;
+    }
+
+    .title .card {
+        background-color: #e2e2e2;
+        border-radius: 3px;
+        padding: 10px;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .card:hover {
+        background-color: #d1d1d1;
+    }
+
+    .card strong {
+        display: block;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+        color: #000;
+
+    }
+
+    .card p {
+        margin: 0 0 10px;
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    button {
+        display: block;
+        margin: 10px auto;
+        padding: 5px 10px;
+        background-color: #afafaf;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #898989;
+    }
+
+    .add-task button {
+        margin: 0;
+        /* Remove default margin */
+        padding: 5px 10px;
+        background-color: #b5b8ba;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .add-task button:hover {
+        background-color: #a2a2a2;
+    }
+</style>

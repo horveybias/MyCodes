@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header></header>
+        <div class="menu-wrapper">
+            <div class="zoom">
+                <h3>Zoom</h3>
+                <div class="icon"><i class="fa fa-arrows-alt" style="font-size:25px;"></i></div>
+            </div>
+            <div class="filter">
+                <h3>Filter</h3>
+                <div class="icon"><i class='fa fa-filter' style='font-size:25px'></i></div>
+            </div>
+            <div class="search">
+                <h3>Search</h3>
+                <div class="icon"><i class="fa fa-search" style="font-size:25px"></i></div>
+            </div>
+            <div class="new-item">
+                <h3>New Item</h3>
+                <div class="icon"><i class="fa fa-plus" style="font-size:25px"></i></div>
+            </div>
+        </div>
+        <div class="board">
+            <div class="column">
+                <div class="column-title">
+                    <div class=color1></div>
+                    <div class="text">
+                        <h2>To Do</h2>
+                    </div>
+                    <button><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-title">
+                    <div class=color1></div>
+                    <div class="text">
+                        <h2>In Progress</h2>
+                    </div>
+                    <button><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-title">
+                    <div class=color1></div>
+                    <div class="text">
+                        <h2>Done</h2>
+                    </div>
+                    <button><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+        max-width: 1500px;
+        margin-inline: auto;
+    }
+
+    header {
+        background-color: #956a6a;
+        min-height: 200px;
+    }
+
+    .menu-wrapper {
+        background-color: #5d7497;
+        min-height: 50px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px;
+        gap: 1rem 1rem;
+    }
+
+    .board {
+        background-color: #6062c9;
+        min-height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 3rem;
+        padding: 10px;
+    }
+
+    .column {
+        background-color: #ad88a8;
+        min-height: 500px;
+        min-width: 400px;
+    }
+
+    .column-title {
+        background-color: black;
+        width: auto;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .color1 {
+        background-color: #5d7497;
+        width: 20px;
+        height: 40px;
+    }
+
+    .text {
+        width: auto;
+        color: white;
+        padding-right: 150px;
+    }
+
+    button {
+        background-color: #fff;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .new-item {
+        background-color: #f6f6f6;
+        min-width: 200px;
+        min-height: 50px;
+    }
+
+    .zoom,
+    .filter,
+    .search,
+    .new-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f6f6f6;
+        min-width: 200px;
+        min-height: 50px;
+        padding: 0 10px;
+        border-radius: 5px;
+    }
+
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+</html>

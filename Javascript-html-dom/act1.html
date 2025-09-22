@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CREATE EDITOR</h1><br>
+    <P id="mytext">write your paragraph.</P>
+    <button type="button" onclick="showhidetext()">Show Text</button>
+    <button type="button" onclick="changecolor()">Change Color text</button>
+
+
+    <script>
+        function showhidetext() {
+            let text = document.getElementById("mytext");
+            if(text.style.display === "none"){
+                text.style.display = "block";
+            }else{
+                text.style.display = "none";
+            }
+        }
+
+        function changecolor() {
+            
+        }
+
+
+    </script>
+</body>
+</html>
+
+
+<!--Activities
+1. DOM Basics & Querying
+Activity: Create a “Content Editor”
+•	Task: Display a paragraph. Add buttons for Show/Hide, Change Text, Change Color, Reset.
+•	Concepts: getElementById, innerHTML, style.
+•	Challenge: Add input fields so the user can enter a custom message or color.
+
+2. Forms & Validation
+Activity: “Mini Form Validator”
+•	Task: Create a simple form with Name, Email, and Age fields. Validate:
+o	Name not empty.
+o	Email contains “@”.
+o	Age is a number > 0.
+•	Show error messages dynamically without refreshing the page.
+•	Concepts: forms, value, event.preventDefault().
+•	Challenge: Add live validation as the user types.
+
+3. Catch the Button
+Activity: “Catch the Button Game”
+•	Task: A button says "Catch Me!" but it only appears after 3 seconds. The player must click it before it disappears again.
+•	Concepts: addEventListener, setTimeout, DOM manipulation (style.display, innerText).
+•	Challenge: Count how many times the player successfully clicked it.-->

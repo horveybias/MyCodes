@@ -1,0 +1,128 @@
+body {
+  background-color: #3c3c3c;
+}
+
+.h1 {
+  font-family: Verdana;
+  color: #3cb371;
+}
+.h2 {
+  font-family: Verdana;
+  color: white;
+  border-bottom: 3px solid #3cb371;
+}
+.h3 {
+  font-family: Verdana;
+  color: white;
+  border-bottom: 3px solid #3cb371;
+}
+.h4 {
+  font-family: Verdana;
+  color: white;
+  border-bottom: 3px solid #3cb371;
+}
+.h5 {
+  font-family: Verdana;
+  color: white;
+  border-bottom: 3px solid #3cb371;
+}
+.h6 {
+  font-family: Verdana;
+  color: white;
+  border-bottom: 3px solid #3cb371;
+}
+
+.a0 {
+  font-family: Helvetica;
+  color: white;
+}
+.a1 {
+  font-family: Helvetica;
+  color: white;
+  text-indent: 50px;
+}
+.a2 {
+  font-family: Helvetica;
+  color: white;
+}
+
+.a3 {
+  font-family: Helvetica;
+  color: white;
+  text-indent: 50px;
+}
+
+.a4 {
+  font-family: Helvetica;
+  color: white;
+}
+
+.a5 {
+  font-family: Helvetica;
+  color: white;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.a0,
+.a1,
+.a2,
+.a3,
+.a4,
+.a5 {
+  margin: 25px;
+}
+
+.a0 {
+  list-style-type: none;
+  margin: 1;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.l {
+  float: left;
+}
+
+.l a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+}
+
+.l a:hover {
+  background-color: #3cb371;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu body"
+    "footer footer";
+  grid-template-columns: 1fr 8fr;
+  gap: 2px;
+  padding: 2px;
+}
+
+.container > div {
+
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container > div.body {
+  grid-area: body;
+}
+.container > div.footer {
+  grid-area: footer;
+}

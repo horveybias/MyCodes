@@ -1,0 +1,28 @@
+import tkinter as tk
+from tkinter import ttk
+
+root = tk.Tk()
+
+# Sample data
+data = [
+    (1, "Alice", 25),
+    (2, "Bob", 30),
+    (3, "Charlie", 22)
+]
+
+# Define columns
+columns = ("ID", "Name", "Age")
+
+# Create Treeview widget
+tree = ttk.Treeview(root, columns=columns, show="headings")
+
+# Set column headings
+for col in columns:
+    tree.heading(col, text=col)
+
+# Insert data into the table
+for row in data:
+    tree.insert("", tk.END, values=row)
+
+tree.pack()
+root.mainloop()
